@@ -50,7 +50,7 @@ class FieldModel {
     this.readOnly = false,
     this.options = const [],
     this.dateTimeFormat = 'MM/dd/yyyy',
-    this.capitalization = TextCapitalization.none,
+    this.capitalization = TextCapitalization.sentences,
     this.dateType = DateTypes.eighteenYearsBefore,
     this.readOnlyColor = const Color(0xFFE9EAEE),
     this.value,
