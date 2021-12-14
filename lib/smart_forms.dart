@@ -11,10 +11,13 @@ import 'smart_field.dart';
 class SmartForms extends StatefulWidget {
   final FormModel? form;
   final dynamic callback;
+  final Function(String)? onChange;
+
   const SmartForms({
     Key? key,
     required this.form,
     this.callback,
+    this.onChange,
   }) : super(key: key);
 
   @override
@@ -169,6 +172,7 @@ class SmartFormsState extends State<SmartForms> {
       callback: callback as void Function()?,
       action: getInputAction(field.action),
       formatters: field.formatters,
+      onChange: widget.onChange,
     );
   }
 
